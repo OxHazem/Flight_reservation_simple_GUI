@@ -1,6 +1,6 @@
 import tkinter as tk
 from tkinter import messagebox
-from db import add_reservation
+from database import add_reservation
 
 def booking_page(root, show_frame):
     frame = tk.Frame(root)

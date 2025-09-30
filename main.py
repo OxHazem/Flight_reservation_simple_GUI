@@ -1,8 +1,8 @@
 import tkinter as tk
-# from .db import setup_database
+from database import setup_database
 from home import home_page
 from booking import booking_page
-from reservation import reservation_list_page
+from reservations import reservation_list_page
 from edit_reservation import edit_reservation_page
 
 root = tk.Tk()
@@ -18,6 +18,7 @@ def show_frame(frame_func, *args):
     current_frame = frame_func(root, show_frame, *args)
     current_frame.pack(fill="both", expand=True)
 
-
+setup_database()
 show_frame(home_page)
 root.mainloop()
+
